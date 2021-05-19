@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../dvi_pass_verilog.gen/sources_1/ip/clk_wiz_125M_200M" \
+"../../../../dvi_pass_verilog.gen/sources_1/ip/dvi2rgb_1/src/ila_pixclk/sim/ila_pixclk.v" \
+"../../../../dvi_pass_verilog.gen/sources_1/ip/dvi2rgb_1/src/ila_refclk/sim/ila_refclk.v" \
+"../../../../dvi_pass_verilog.gen/sources_1/ip/clk_wiz_125M_200M/clk_wiz_125M_200M_clk_wiz.v" \
+"../../../../dvi_pass_verilog.gen/sources_1/ip/clk_wiz_125M_200M/clk_wiz_125M_200M.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

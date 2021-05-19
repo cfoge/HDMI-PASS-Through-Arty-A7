@@ -1,0 +1,68 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 988e951bd58b4f96aeff148a225d7308 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot hdmi_pass_top_behav xil_defaultlib.hdmi_pass_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package xil_defaultlib.dvi_constants
+Compiling package ieee.math_real
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=8,CLKIN1...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_125M_200M_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_125M_200M
+Compiling architecture idelaye2_v of entity unisim.IDELAYE2 [\IDELAYE2(high_performance_mode=...]
+Compiling architecture iserdese2_v of entity unisim.ISERDESE2 [\ISERDESE2(data_width=10,interfa...]
+Compiling architecture iserdese2_v of entity unisim.ISERDESE2 [\ISERDESE2(data_width=10,interfa...]
+Compiling architecture behavioral of entity xil_defaultlib.InputSERDES [inputserdes_default]
+Compiling architecture behavioral of entity xil_defaultlib.SyncBase [syncbase_default]
+Compiling architecture behavioral of entity xil_defaultlib.SyncBase [\SyncBase(kresetto='1')\]
+Compiling architecture behavioral of entity xil_defaultlib.PhaseAlign [phasealign_default]
+Compiling architecture behavioral of entity xil_defaultlib.ChannelBond [channelbond_default]
+Compiling architecture behavioral of entity xil_defaultlib.TMDS_Decoder [tmds_decoder_default]
+Compiling architecture bufg_v of entity unisim.BUFG [bufg_default]
+Compiling architecture behavioral of entity xil_defaultlib.ResyncToBUFG [resynctobufg_default]
+Compiling architecture behavioral of entity xil_defaultlib.GlitchFilter [\GlitchFilter(knoofperiodstofilt...]
+Compiling architecture behavioral of entity xil_defaultlib.TWI_SlaveCtl [\TWI_SlaveCtl(ksampleclkfreqinmh...]
+Compiling architecture behavioral of entity xil_defaultlib.EEPROM_8b [\EEPROM_8b(ksampleclkfreqinmhz=2...]
+Compiling architecture behavioral of entity xil_defaultlib.SyncAsync [\SyncAsync(kresetto='1')\]
+Compiling architecture behavioral of entity xil_defaultlib.ResetBridge [resetbridge_default]
+Compiling architecture idelayctrl_v of entity unisim.IDELAYCTRL [\IDELAYCTRL(1,7)\]
+Compiling architecture ibufds_v of entity unisim.IBUFDS [\IBUFDS(iostandard="TMDS_33")(1,...]
+Compiling architecture mmcme2_adv_v of entity unisim.MMCME2_ADV [\MMCME2_ADV(clkfbout_mult_f=15.0...]
+Compiling architecture bufio_v of entity unisim.BUFIO [bufio_default]
+Compiling architecture bufr_v of entity unisim.BUFR [\BUFR(bufr_divide="5")(1,1)(1,7)...]
+Compiling architecture behavioral of entity xil_defaultlib.SyncAsync [syncasync_default]
+Compiling architecture behavioral of entity xil_defaultlib.TMDS_Clocking [\TMDS_Clocking(kclkrange=3)\]
+Compiling architecture behavioral of entity xil_defaultlib.ResetBridge [\ResetBridge(kpolarity='0')\]
+Compiling architecture behavioral of entity xil_defaultlib.dvi2rgb [\dvi2rgb(kclkrange=3,kdebug=fals...]
+Compiling architecture dvi2rgb_1_arch of entity xil_defaultlib.dvi2rgb_1 [dvi2rgb_1_default]
+Compiling architecture iobuf_v of entity unisim.IOBUF [\IOBUF(1,7)(1,4)\]
+Compiling architecture mmcme2_adv_v of entity unisim.MMCME2_ADV [\MMCME2_ADV(clkfbout_mult_f=15.0...]
+Compiling architecture bufr_v of entity unisim.BUFR [\BUFR(bufr_divide="1")(1,1)(1,7)...]
+Compiling architecture behavioral of entity xil_defaultlib.ClockGen [\ClockGen(kclkrange=3)(1,4)\]
+Compiling architecture behavioral of entity xil_defaultlib.TMDS_Encoder [tmds_encoder_default]
+Compiling architecture obufds_v of entity unisim.OBUFDS [\OBUFDS(iostandard="TMDS_33")(1,...]
+Compiling architecture oserdese2_v of entity unisim.OSERDESE2 [\OSERDESE2(data_rate_tq="SDR",da...]
+Compiling architecture oserdese2_v of entity unisim.OSERDESE2 [\OSERDESE2(data_rate_tq="SDR",da...]
+Compiling architecture behavioral of entity xil_defaultlib.OutputSERDES [outputserdes_default]
+Compiling architecture behavioral of entity xil_defaultlib.rgb2dvi [\rgb2dvi(kclkprimitive="MMCM",kc...]
+Compiling architecture rgb2dvi_0_arch of entity xil_defaultlib.rgb2dvi_0 [rgb2dvi_0_default]
+Compiling architecture hdmi_pass_top_arc of entity xil_defaultlib.hdmi_pass_top
+Built simulation snapshot hdmi_pass_top_behav

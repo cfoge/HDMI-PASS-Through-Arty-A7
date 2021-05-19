@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1621296219">
+  <File Type="PA-TCL" Name="dvi_pass_top.tcl"/>
+  <File Type="REPORTS-TCL" Name="dvi_pass_top_reports.tcl"/>
+  <File Type="RDS-RDS" Name="dvi_pass_top.vds"/>
+  <File Type="RDS-UTIL" Name="dvi_pass_top_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="dvi_pass_top_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="dvi_pass_top.dcp"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/dvi_pass_top.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Desktop/hdmi_pass_through_ZyboZ7-10-master/dvi_pass_verilog/dvi_pass_verilog.srcs/sources_1/new/dvi_pass_top.v"/>
+        <Attr Name="ImportTime" Val="1621296215"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdmi_pass_through_ZyboZ7-10-master/hdmi_pass_top.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Desktop/hdmi_pass_through_ZyboZ7-10-master/hdmi_pass_top.vhd"/>
+        <Attr Name="ImportTime" Val="1534517210"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="dvi_pass_top"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/digilent-xdc-master/Arty-Z7-20-Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../DIGILENT_DOWNLOADS/digilent-xdc-master/Arty-Z7-20-Master.xdc"/>
+        <Attr Name="ImportTime" Val="1618794292"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="rgb2dvi_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_125M_200M"/>
+  <BlockFileSet Type="BlockSrcs" Name="dvi2rgb_1"/>
+</GenRun>
