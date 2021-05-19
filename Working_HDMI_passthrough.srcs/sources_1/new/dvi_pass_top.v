@@ -26,6 +26,7 @@
 module dvi_pass_top(
         input sysclk_i     , // 125MH System Clock Input
 		input async_reset_i    , // Reset switch on board
+		input btn0,btn1,btn2,btn3, // switches and buttons
 		// HDMI In/Rx
 		input tmds_rx_clk_p_i  ,
         input tmds_rx_clk_n_i  ,
@@ -44,7 +45,8 @@ module dvi_pass_top(
 
 
 ///// Registers and wires
-wire [23:0] vid_pData       ;
+wire [23:0] vid_pData       ; //vid data from DVI2RGB
+wire [23:0] vid_pData_fx       ; //Post fx vid data
 wire vid_pVDE           ;
 wire vid_pHSync        ;
 wire vid_pVSync         ;
@@ -132,12 +134,21 @@ assign hdmi_rx_hpd_o = 1'b1 ;
     .TMDS_Data_p(tmds_tx_data_p_o),
     .TMDS_Data_n(tmds_tx_data_n_o),
     .aRst(async_reset_i),
-    .vid_pData(vid_pData),
+    .vid_pData(vid_pData_fx),
     .vid_pVDE(vid_pVDE),
     .vid_pHSync(vid_pHSync),
     .vid_pVSync(vid_pVSync),
     .PixelClk(pixelclk)
   );
+  
+  //fx module
+  rgb_invert rgb_invert_inist(
+        .vid_pData_in(vid_pData),
+        .mode({btn3,btn2,btn1,btn0}),
+        .vid_pData_out(vid_pData_fx)
+    );
+  
+  //
 
 
 endmodule

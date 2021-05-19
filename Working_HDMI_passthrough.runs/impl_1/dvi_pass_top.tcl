@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/robdj/Desktop/hdmi_pass_through_ZyboZ7-10-master/dvi_pass_verilog/dvi_pass_verilog.runs/impl_1/dvi_pass_top.tcl"
+  variable script "C:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.runs/impl_1/dvi_pass_top.tcl"
   variable category "vivado_impl"
 }
 
@@ -126,7 +126,7 @@ set rc [catch {
   set_param chipscope.maxJobs 2
   set_param xicom.use_bs_reader 1
   open_checkpoint dvi_pass_top_routed.dcp
-  set_property webtalk.parent_dir C:/Users/robdj/Desktop/hdmi_pass_through_ZyboZ7-10-master/dvi_pass_verilog/dvi_pass_verilog.cache/wt [current_project]
+  set_property webtalk.parent_dir C:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.cache/wt [current_project]
 set_property TOP dvi_pass_top [current_fileset]
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }

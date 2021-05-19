@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/robdj/Desktop/hdmi_pass_through_ZyboZ7-10-master/dvi_pass_verilog/dvi_pass_verilog.srcs/constrs_1/imports/digilent-xdc-master/Arty-Z7-20-Master.xdc rfile:../../../dvi_pass_verilog.srcs/constrs_1/imports/digilent-xdc-master/Arty-Z7-20-Master.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.srcs/constrs_1/imports/digilent-xdc-master/Arty-Z7-20-Master.xdc rfile:../../../Working_HDMI_passthrough.srcs/constrs_1/imports/digilent-xdc-master/Arty-Z7-20-Master.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN H16 IOSTANDARD LVCMOS33} [get_ports sysclk_i]
 set_property src_info {type:XDC file:1 line:13 export:INPUT save:INPUT read:READ} [current_design]
@@ -19,6 +19,8 @@ set_property src_info {type:XDC file:1 line:32 export:INPUT save:INPUT read:READ
 set_property -dict {PACKAGE_PIN D20 IOSTANDARD LVCMOS33} [get_ports btn1]
 set_property src_info {type:XDC file:1 line:33 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN L20 IOSTANDARD LVCMOS33} [get_ports btn2]
+set_property src_info {type:XDC file:1 line:34 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN L19    IOSTANDARD LVCMOS33 } [get_ports { btn3 }]; #IO_L9P_T1_DQS_AD3P_35 Sch=BTN3
 set_property src_info {type:XDC file:1 line:64 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN H17   IOSTANDARD LVCMOS33 } [get_ports { hdmi_rx_cec }]; #IO_L13N_T2_MRCC_35 Sch=HDMI_RX_CEC
 set_property src_info {type:XDC file:1 line:65 export:INPUT save:INPUT read:READ} [current_design]

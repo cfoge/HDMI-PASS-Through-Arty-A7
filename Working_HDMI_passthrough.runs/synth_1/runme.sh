@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/robdj/Desktop/hdmi_pass_through_ZyboZ7-10-master/dvi_pass_verilog/dvi_pass_verilog.runs/synth_1'
+HD_PWD='C:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

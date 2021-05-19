@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date             : Tue May 18 10:06:59 2021
+| Date             : Wed May 19 14:46:45 2021
 | Host             : LAPTOP-2OPCD7I5 running 64-bit major release  (build 9200)
 | Command          : report_power -file dvi_pass_top_power_routed.rpt -pb dvi_pass_top_power_summary_routed.pb -rpx dvi_pass_top_power_routed.rpx
 | Design           : dvi_pass_top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.517        |
+| Total On-Chip Power (W)  | 0.520        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.405        |
+| Dynamic (W)              | 0.408        |
 | Device Static (W)        | 0.112        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 79.0         |
@@ -52,9 +52,9 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.005 |        8 |       --- |             --- |
-| Slice Logic              |     0.002 |     1511 |       --- |             --- |
-|   LUT as Logic           |     0.001 |      537 |     53200 |            1.01 |
+| Clocks                   |     0.004 |        8 |       --- |             --- |
+| Slice Logic              |     0.004 |     1551 |       --- |             --- |
+|   LUT as Logic           |     0.004 |      569 |     53200 |            1.07 |
 |   Register               |    <0.001 |      634 |    106400 |            0.60 |
 |   CARRY4                 |    <0.001 |       18 |     13300 |            0.14 |
 |   BUFG                   |    <0.001 |        3 |        32 |            9.38 |
@@ -62,12 +62,12 @@ Table of Contents
 |   Others                 |    <0.001 |       98 |       --- |             --- |
 |   F7/F8 Muxes            |    <0.001 |       24 |     53200 |            0.05 |
 |   BUFR                   |     0.000 |        3 |        88 |            3.41 |
-| Signals                  |     0.001 |     1065 |       --- |             --- |
+| Signals                  |     0.003 |     1111 |       --- |             --- |
 | MMCM                     |     0.124 |        2 |         4 |           50.00 |
 | PLL                      |     0.110 |        1 |         4 |           25.00 |
-| I/O                      |     0.163 |       21 |       125 |           16.80 |
+| I/O                      |     0.163 |       25 |       125 |           20.00 |
 | Static Power             |     0.112 |          |           |                 |
-| Total                    |     0.517 |          |           |                 |
+| Total                    |     0.520 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.031 |       0.022 |      0.009 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.034 |       0.025 |      0.009 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.151 |       0.140 |      0.011 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.041 |       0.040 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -158,22 +158,25 @@ Table of Contents
 +--------------------------------------+-----------+
 | Name                                 | Power (W) |
 +--------------------------------------+-----------+
-| dvi_pass_top                         |     0.405 |
+| dvi_pass_top                         |     0.408 |
 |   clkwiz_inst                        |     0.111 |
 |     inst                             |     0.111 |
-|   dvi2rgb_inst                       |     0.100 |
-|     U0                               |     0.100 |
+|   dvi2rgb_inst                       |     0.099 |
+|     U0                               |     0.099 |
 |       DataDecoders[0].DecoderX       |     0.011 |
 |       DataDecoders[1].DecoderX       |     0.011 |
 |       DataDecoders[2].DecoderX       |     0.011 |
 |       GenerateDDC.DDC_EEPROM         |     0.002 |
 |       TMDS_ClockingX                 |     0.065 |
-|   rgb2dvi_inst                       |     0.194 |
-|     U0                               |     0.194 |
+|   rgb2dvi_inst                       |     0.198 |
+|     U0                               |     0.198 |
 |       ClockGenInternal.ClockGenX     |     0.062 |
 |       ClockSerializer                |     0.033 |
+|       DataEncoders[0].DataEncoder    |     0.002 |
 |       DataEncoders[0].DataSerializer |     0.033 |
+|       DataEncoders[1].DataEncoder    |     0.001 |
 |       DataEncoders[1].DataSerializer |     0.033 |
+|       DataEncoders[2].DataEncoder    |     0.001 |
 |       DataEncoders[2].DataSerializer |     0.033 |
 +--------------------------------------+-----------+
 
