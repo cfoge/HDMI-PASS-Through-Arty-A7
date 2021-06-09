@@ -26,8 +26,8 @@ module bus_delay_shiftreg(
         input clk,
         output [7:0] outputbus
     );
-     parameter MSB = 4;        // [Optional] Declare a parameter to represent number of bits in shift register
-     wire [7:0] o1,o2,o3,o4,o5,o6,o7,o8;
+     parameter MSB = 16;        // [Optional] Declare a parameter to represent number of bits in shift register
+     wire [MSB-1:0] o1,o2,o3,o4,o5,o6,o7,o8;
     
     
     nbit_shiftreg #(MSB) sr0(
@@ -96,7 +96,7 @@ module bus_delay_shiftreg(
     );
     
     
-    assign outputbus = {o8[1],o7[1],o6[1],o5[1],o4[1],o3[1],o2[1],o1[1]};
+    assign outputbus = {o8[15],o7[15],o6[15],o5[15],o4[15],o3[15],o2[15],o1[15]};
     
     
 endmodule

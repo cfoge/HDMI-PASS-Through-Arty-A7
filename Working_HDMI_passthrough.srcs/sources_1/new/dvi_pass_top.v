@@ -145,7 +145,8 @@ assign hdmi_rx_hpd_o = 1'b1 ;
   rgb_invert rgb_invert_inist(
         .vid_pData_in(vid_pData),
         .mode({btn3,btn2,btn1,btn0}),
-        .vid_pData_out(vid_pData_fx)
+        .vid_pData_out(vid_pData_fx),
+        .pxclk(pixelclk)
     );
   
   //

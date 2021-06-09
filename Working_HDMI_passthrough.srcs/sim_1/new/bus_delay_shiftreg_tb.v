@@ -47,7 +47,7 @@ module bus_delay_shiftreg_tb(
    initial begin       
   
    repeat (2) @ (posedge clk)
-         inputbus <= 8'b10101010;
+         inputbus <= 8'b11111111;
          
 
    inputbus <= 8'b00000000;

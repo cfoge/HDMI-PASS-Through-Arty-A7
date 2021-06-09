@@ -21,6 +21,7 @@
 
 
 module rgb_invert(
+        input pxclk,
         input [23:0] vid_pData_in,
         input [3:0] mode,
         output [23:0] vid_pData_out
@@ -30,17 +31,21 @@ module rgb_invert(
     wire [7:0] red =  vid_pData_in[7:0];
     wire [7:0] green =  vid_pData_in[15:8];
     wire [7:0] blue =  vid_pData_in[23:16];
-    
+    wire [7:0] red_delay;
 
     
-    
+    bus_delay_shiftreg red_delay_module(
+    .inputbus(red),
+    .clk(pxclk),
+    .outputbus(red_delay)
+    );
     
     
     always @ (vid_pData_in, mode) begin
         case (mode)
             4'b0000  ://normal
                 begin
-                     vid = {blue,green,red};
+                     vid = {blue,green,red_delay};
                 end
             4'b0001  ://invert
                 begin
@@ -80,7 +85,7 @@ module rgb_invert(
                         end
                    else 
                         begin
-                            vid = {0,0, 0};
+                            vid = {8'b00000000,8'b00000000,8'b00000000};
                         end
                     
                 end
@@ -92,7 +97,7 @@ module rgb_invert(
                         end
                    else 
                         begin
-                            vid = {0,0, 0};
+                            vid = {8'b00000000,8'b00000000,8'b00000000};
                         end
                     
                 end
@@ -104,7 +109,7 @@ module rgb_invert(
                         end
                    else 
                         begin
-                            vid = {0,0, 0};
+                            vid = {8'b00000000,8'b00000000,8'b00000000};
                         end
                     
                 end
