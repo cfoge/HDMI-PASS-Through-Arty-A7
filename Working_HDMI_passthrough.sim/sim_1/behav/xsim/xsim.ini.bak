@@ -495,4 +495,3 @@ ddr4_pl_phy_v1_0_0=$RDI_DATADIR/xsim/ip/ddr4_pl_phy_v1_0_0
 bs_switch_v1_0_0=$RDI_DATADIR/xsim/ip/bs_switch_v1_0_0
 v_uhdsdi_vidgen_v1_0_1=$RDI_DATADIR/xsim/ip/v_uhdsdi_vidgen_v1_0_1
 an_lt_v1_0_1=$RDI_DATADIR/xsim/ip/an_lt_v1_0_1
-xil_defaultlib=xsim.dir/xil_defaultlib

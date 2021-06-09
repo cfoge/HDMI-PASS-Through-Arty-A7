@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1623113839">
-  <File Type="PA-TCL" Name="nbit_shiftreg.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="nbit_shiftreg_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="nbit_shiftreg_reports.tcl"/>
-  <File Type="RDS-RDS" Name="nbit_shiftreg.vds"/>
-  <File Type="RDS-UTIL" Name="nbit_shiftreg_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="nbit_shiftreg_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="nbit_shiftreg.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="nbit_shiftreg_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="nbit_shiftreg_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1623218668">
+  <File Type="PA-TCL" Name="bus_delay_shiftreg.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="bus_delay_shiftreg_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="bus_delay_shiftreg_reports.tcl"/>
+  <File Type="RDS-RDS" Name="bus_delay_shiftreg.vds"/>
+  <File Type="RDS-UTIL" Name="bus_delay_shiftreg_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="bus_delay_shiftreg_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="bus_delay_shiftreg.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="bus_delay_shiftreg_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="bus_delay_shiftreg_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/nbit_shiftreg.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/bus_delay_shiftreg.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -47,7 +54,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="nbit_shiftreg"/>
+      <Option Name="TopModule" Val="bus_delay_shiftreg"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

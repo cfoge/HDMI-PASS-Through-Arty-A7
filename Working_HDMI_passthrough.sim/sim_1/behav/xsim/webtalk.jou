@@ -2,11 +2,11 @@
 # Webtalk v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Tue May 18 09:11:06 2021
-# Process ID: 22948
-# Current directory: C:/Users/robdj/Desktop/hdmi_pass_through_ZyboZ7-10-master/dvi_pass_verilog/dvi_pass_verilog.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source C:/Users/robdj/Desktop/hdmi_pass_through_ZyboZ7-10-master/dvi_pass_verilog/dvi_pass_verilog.sim/sim_1/behav/xsim/xsim.dir/hdmi_pass_top_behav/webtalk/xsim_webtalk.tcl -notrace
-# Log file: C:/Users/robdj/Desktop/hdmi_pass_through_ZyboZ7-10-master/dvi_pass_verilog/dvi_pass_verilog.sim/sim_1/behav/xsim/webtalk.log
-# Journal file: C:/Users/robdj/Desktop/hdmi_pass_through_ZyboZ7-10-master/dvi_pass_verilog/dvi_pass_verilog.sim/sim_1/behav/xsim\webtalk.jou
+# Start of session at: Wed Jun  9 15:27:45 2021
+# Process ID: 23068
+# Current directory: C:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.sim/sim_1/behav/xsim/xsim.dir/bus_delay_shiftreg_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: C:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
-source C:/Users/robdj/Desktop/hdmi_pass_through_ZyboZ7-10-master/dvi_pass_verilog/dvi_pass_verilog.sim/sim_1/behav/xsim/xsim.dir/hdmi_pass_top_behav/webtalk/xsim_webtalk.tcl -notrace
+source C:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.sim/sim_1/behav/xsim/xsim.dir/bus_delay_shiftreg_tb_behav/webtalk/xsim_webtalk.tcl -notrace

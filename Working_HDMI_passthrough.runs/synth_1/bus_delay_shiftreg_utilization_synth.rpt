@@ -1,13 +1,13 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Tue Jun  8 10:58:51 2021
+| Date         : Wed Jun  9 16:05:12 2021
 | Host         : LAPTOP-2OPCD7I5 running 64-bit major release  (build 9200)
-| Command      : report_utilization -file nbit_shiftreg_utilization_synth.rpt -pb nbit_shiftreg_utilization_synth.pb
-| Design       : nbit_shiftreg
+| Command      : report_utilization -file bus_delay_shiftreg_utilization_synth.rpt -pb bus_delay_shiftreg_utilization_synth.pb
+| Design       : bus_delay_shiftreg
 | Device       : 7z020clg400-1
 | Design State : Synthesized
----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------
 
 Utilization Design Information
 
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |    3 |     0 |     53200 | <0.01 |
-|   LUT as Logic          |    3 |     0 |     53200 | <0.01 |
+| Slice LUTs*             |    0 |     0 |     53200 |  0.00 |
+|   LUT as Logic          |    0 |     0 |     53200 |  0.00 |
 |   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
-| Slice Registers         |    4 |     0 |    106400 | <0.01 |
-|   Register as Flip Flop |    4 |     0 |    106400 | <0.01 |
+| Slice Registers         |   16 |     0 |    106400 |  0.02 |
+|   Register as Flip Flop |   16 |     0 |    106400 |  0.02 |
 |   Register as Latch     |    0 |     0 |    106400 |  0.00 |
 | F7 Muxes                |    0 |     0 |     26600 |  0.00 |
 | F8 Muxes                |    0 |     0 |     13300 |  0.00 |
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 4     |          Yes |       Reset |            - |
+| 16    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |    9 |     0 |       125 |  7.20 |
+| Bonded IOB                  |   17 |     0 |       125 | 13.60 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         4 |  0.00 |
@@ -146,11 +146,9 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| IBUF     |    5 |                  IO |
-| OBUF     |    4 |                  IO |
-| LUT3     |    4 |                 LUT |
-| FDRE     |    4 |        Flop & Latch |
-| LUT1     |    1 |                 LUT |
+| FDRE     |   16 |        Flop & Latch |
+| IBUF     |    9 |                  IO |
+| OBUF     |    8 |                  IO |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 

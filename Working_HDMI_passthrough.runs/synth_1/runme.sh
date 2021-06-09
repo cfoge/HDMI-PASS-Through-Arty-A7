@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log nbit_shiftreg.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source nbit_shiftreg.tcl
+EAStep vivado -log bus_delay_shiftreg.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bus_delay_shiftreg.tcl
