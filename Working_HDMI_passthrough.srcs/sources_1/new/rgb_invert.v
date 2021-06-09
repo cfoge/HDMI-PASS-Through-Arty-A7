@@ -31,36 +31,84 @@ module rgb_invert(
     wire [7:0] green =  vid_pData_in[15:8];
     wire [7:0] blue =  vid_pData_in[23:16];
     
+
+    
+    
+    
+    
     always @ (vid_pData_in, mode) begin
         case (mode)
-            3'b000  :
+            4'b0000  ://normal
                 begin
                      vid = {blue,green,red};
                 end
-            3'b001  :
+            4'b0001  ://invert
                 begin
                      vid = {~blue,~green,~red};
                 end
-            3'b010  :
+            4'b0010  ://colur swap
                 begin
                      vid = {green,red, blue};
                 end
-            3'b011  :
+            4'b0011  ://colour swap invert
                 begin
-                     vid = {blue,green,red};
+                     vid = {~blue,green,~red};
                 end
-            3'b100  :
+            4'b0100  ://bit mash1
                 begin
                      vid = {green^red,red, blue^green};
                 end
-            3'b101  :
+            4'b0101  ://bit mash2
                 begin
                      vid = {~red,red&green, blue^green};
                 end
-            3'b111  :
+            4'b0111  ://posterise 50% // bad method
                 begin
-                     vid = {red,~red, blue};
+                     vid = {red & 8'b11110000,green& 8'b11110000, blue& 8'b11110000};
                 end
+                
+            4'b1000  ://posterise 70%
+                begin
+                     vid = {red & 8'b11000000,green& 8'b11000000, blue& 8'b11000000};
+                end
+                
+            4'b1001  ://simple key R //dsnt work i think
+                begin
+                    if(red > 8'b00001111)
+                        begin
+                            vid = {red,green, blue};
+                        end
+                   else 
+                        begin
+                            vid = {0,0, 0};
+                        end
+                    
+                end
+           4'b1010  ://simple key g
+                begin
+                    if(green > 8'b00001111)
+                        begin
+                            vid = {red,green, blue};
+                        end
+                   else 
+                        begin
+                            vid = {0,0, 0};
+                        end
+                    
+                end
+           4'b1010  ://simple key b
+                begin
+                    if(blue > 8'b00001111)
+                        begin
+                            vid = {red,green, blue};
+                        end
+                   else 
+                        begin
+                            vid = {0,0, 0};
+                        end
+                    
+                end
+
                 
             
             default :  

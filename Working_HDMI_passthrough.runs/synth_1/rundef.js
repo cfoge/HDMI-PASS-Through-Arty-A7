@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log dvi_pass_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source dvi_pass_top.tcl" );
+         "-log nbit_shiftreg.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source nbit_shiftreg.tcl" );
 
 
 
