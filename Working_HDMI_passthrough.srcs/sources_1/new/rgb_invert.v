@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: CFOGE
+// Engineer: Robert D Jordan
 // 
 // Create Date: 19.05.2021 13:19:52
 // Design Name: 

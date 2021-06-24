@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Wed Jun  9 20:11:05 2021
+| Date         : Thu Jun 10 11:27:22 2021
 | Host         : LAPTOP-2OPCD7I5 running 64-bit major release  (build 9200)
 | Command      : report_clock_utilization -file dvi_pass_top_clock_utilization_routed.rpt
 | Design       : dvi_pass_top
@@ -47,16 +47,16 @@ Table of Contents
 2. Global Clock Resources
 -------------------------
 
-+-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+------------------------------+---------------------------------------------------------------------+--------------------------------------------------------------+
-| Global Id | Source Id | Driver Type/Pin | Constraint | Site           | Clock Region | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock                        | Driver Pin                                                          | Net                                                          |
-+-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+------------------------------+---------------------------------------------------------------------+--------------------------------------------------------------+
-| g0        | src0      | BUFR/O          | None       | BUFR_X1Y5      | X1Y1         |                 2 |         322 |               1 |              |                              | dvi2rgb_inst/U0/TMDS_ClockingX/PixelClkBuffer/O                     | dvi2rgb_inst/U0/TMDS_ClockingX/rMMCM_LckdRisingFlag_reg_0    |
-| g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y17 | n/a          |                 2 |         187 |               0 |              |                              | dvi2rgb_inst/U0/GenerateBUFG.ResyncToBUFG_X/InstBUFG/O              | dvi2rgb_inst/U0/GenerateBUFG.ResyncToBUFG_X/CLK              |
-| g2        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y16 | n/a          |                 1 |         158 |               0 |        5.000 | clk_out1_clk_wiz_125M_200M_1 | clkwiz_inst/inst/clkout1_buf/O                                      | clkwiz_inst/inst/clk_out1                                    |
-| g3        | src3      | BUFR/O          | None       | BUFR_X1Y9      | X1Y2         |                 1 |           8 |               0 |              |                              | rgb2dvi_inst/U0/ClockGenInternal.ClockGenX/GenMMCM.PixelClkBuffer/O | rgb2dvi_inst/U0/ClockGenInternal.ClockGenX/pLockGained_reg_0 |
-| g4        | src4      | BUFG/O          | None       | BUFGCTRL_X0Y18 | n/a          |                 1 |           1 |               0 |        8.000 | clkfbout_clk_wiz_125M_200M_1 | clkwiz_inst/inst/clkf_buf/O                                         | clkwiz_inst/inst/clkfbout_buf_clk_wiz_125M_200M              |
-| g5        | src5      | BUFR/O          | None       | BUFR_X1Y8      | X1Y2         |                 1 |           1 |               0 |              |                              | rgb2dvi_inst/U0/ClockGenInternal.ClockGenX/GenMMCM.Deskew/O         | rgb2dvi_inst/U0/ClockGenInternal.ClockGenX/CLKFBIN           |
-+-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+------------------------------+---------------------------------------------------------------------+--------------------------------------------------------------+
++-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+----------------------------+---------------------------------------------------------------------+--------------------------------------------------------------+
+| Global Id | Source Id | Driver Type/Pin | Constraint | Site           | Clock Region | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock                      | Driver Pin                                                          | Net                                                          |
++-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+----------------------------+---------------------------------------------------------------------+--------------------------------------------------------------+
+| g0        | src0      | BUFR/O          | None       | BUFR_X1Y5      | X1Y1         |                 2 |         322 |               1 |              |                            | dvi2rgb_inst/U0/TMDS_ClockingX/PixelClkBuffer/O                     | dvi2rgb_inst/U0/TMDS_ClockingX/rMMCM_LckdRisingFlag_reg_0    |
+| g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y17 | n/a          |                 2 |         187 |               0 |              |                            | dvi2rgb_inst/U0/GenerateBUFG.ResyncToBUFG_X/InstBUFG/O              | dvi2rgb_inst/U0/GenerateBUFG.ResyncToBUFG_X/CLK              |
+| g2        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y16 | n/a          |                 1 |         158 |               0 |        5.000 | clk_out1_clk_wiz_125M_200M | clkwiz_inst/inst/clkout1_buf/O                                      | clkwiz_inst/inst/clk_out1                                    |
+| g3        | src3      | BUFR/O          | None       | BUFR_X1Y9      | X1Y2         |                 1 |           8 |               0 |              |                            | rgb2dvi_inst/U0/ClockGenInternal.ClockGenX/GenMMCM.PixelClkBuffer/O | rgb2dvi_inst/U0/ClockGenInternal.ClockGenX/pLockGained_reg_0 |
+| g4        | src4      | BUFG/O          | None       | BUFGCTRL_X0Y18 | n/a          |                 1 |           1 |               0 |        8.000 | clkfbout_clk_wiz_125M_200M | clkwiz_inst/inst/clkf_buf/O                                         | clkwiz_inst/inst/clkfbout_buf_clk_wiz_125M_200M              |
+| g5        | src5      | BUFR/O          | None       | BUFR_X1Y8      | X1Y2         |                 1 |           1 |               0 |              |                            | rgb2dvi_inst/U0/ClockGenInternal.ClockGenX/GenMMCM.Deskew/O         | rgb2dvi_inst/U0/ClockGenInternal.ClockGenX/CLKFBIN           |
++-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+----------------------------+---------------------------------------------------------------------+--------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 

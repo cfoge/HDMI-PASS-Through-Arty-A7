@@ -1,21 +1,21 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: rdjordan
+// Company: CFOGE
+// Engineer: Robert D Jordan
 // 
 // Create Date: 18.05.2021 09:08:56
-// Design Name: 
+// Design Name: DVI pass thorugh
 // Module Name: dvi_pass_top
 // Project Name: DVI passthrough example
 // Target Devices: ARTY A7 20
-// Tool Versions: 
+// Tool Versions: Vivado 2020.2
 // Description: 
 // Any HDMI source is fed into the HDMI Rx port of the Arty z7-20,  
 // passed through the dvi2rgb and rgb2dvi IP cores and is sent out 
 // un-altered through the HDMI Tx port. 720p res
 // 
 // Dependencies: 
-// 
+// N/A
 // Revision:
 // Revision 0.01 - File Created
 // Additional Comments:

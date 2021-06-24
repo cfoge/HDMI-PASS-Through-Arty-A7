@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Wed Jun  9 20:11:04 2021
+| Date         : Thu Jun 10 11:27:21 2021
 | Host         : LAPTOP-2OPCD7I5 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file dvi_pass_top_methodology_drc_routed.rpt -pb dvi_pass_top_methodology_drc_routed.pb -rpx dvi_pass_top_methodology_drc_routed.rpx
 | Design       : dvi_pass_top
@@ -20,7 +20,7 @@ Table of Contents
 1. REPORT SUMMARY
 -----------------
             Netlist: netlist
-          Floorplan: checkpoint_dvi_pass_top
+          Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
              Violations found: 575
@@ -2808,42 +2808,42 @@ Related violations: <none>
 
 TIMING-17#553 Critical Warning
 Non-clocked sequential cell  
-The clock pin rgb_invert_inist/red_delay_module/sr0/out_reg[14]_srl15/CLK is not reached by a timing clock
+The clock pin rgb_invert_inist/red_delay_module/sr0/out_reg[6]_srl7/CLK is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#554 Critical Warning
 Non-clocked sequential cell  
-The clock pin rgb_invert_inist/red_delay_module/sr0/out_reg[15]/C is not reached by a timing clock
+The clock pin rgb_invert_inist/red_delay_module/sr0/out_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#555 Critical Warning
 Non-clocked sequential cell  
-The clock pin rgb_invert_inist/red_delay_module/sr1/out_reg[14]_srl15/CLK is not reached by a timing clock
+The clock pin rgb_invert_inist/red_delay_module/sr1/out_reg[6]_srl7/CLK is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#556 Critical Warning
 Non-clocked sequential cell  
-The clock pin rgb_invert_inist/red_delay_module/sr1/out_reg[15]/C is not reached by a timing clock
+The clock pin rgb_invert_inist/red_delay_module/sr1/out_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#557 Critical Warning
 Non-clocked sequential cell  
-The clock pin rgb_invert_inist/red_delay_module/sr2/out_reg[14]_srl15/CLK is not reached by a timing clock
+The clock pin rgb_invert_inist/red_delay_module/sr2/out_reg[6]_srl7/CLK is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#558 Critical Warning
 Non-clocked sequential cell  
-The clock pin rgb_invert_inist/red_delay_module/sr2/out_reg[15]/C is not reached by a timing clock
+The clock pin rgb_invert_inist/red_delay_module/sr2/out_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#559 Critical Warning
 Non-clocked sequential cell  
-The clock pin rgb_invert_inist/red_delay_module/sr3/out_reg[14]_srl15/CLK is not reached by a timing clock
+The clock pin rgb_invert_inist/red_delay_module/sr3/out_reg[6]_srl7/CLK is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#560 Critical Warning
 Non-clocked sequential cell  
-The clock pin rgb_invert_inist/red_delay_module/sr3/out_reg[15]/C is not reached by a timing clock
+The clock pin rgb_invert_inist/red_delay_module/sr3/out_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#561 Critical Warning
@@ -2904,13 +2904,13 @@ Related violations: <none>
 XDCB-5#1 Warning
 Runtime inefficient way to find pin objects  
 The option '-through : [get_pins -filter {NAME =~ */*SyncAsync*/oSyncStages_reg[0]/D} -hier]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '6' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
-Current XDC: C:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.gen/sources_1/ip/dvi2rgb_1/src/dvi2rgb.xdc (Line: 13)
+Current XDC: c:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.gen/sources_1/ip/dvi2rgb_1/src/dvi2rgb.xdc (Line: 13)
 Related violations: <none>
 
 XDCB-5#2 Warning
 Runtime inefficient way to find pin objects  
 The option '-through : [get_pins -filter {NAME =~ *SyncAsync*/oSyncStages_reg[0]/D} -hier]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '2' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
-Current XDC: C:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.gen/sources_1/ip/rgb2dvi_0/src/rgb2dvi.xdc (Line: 5)
+Current XDC: c:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.gen/sources_1/ip/rgb2dvi_0/src/rgb2dvi.xdc (Line: 5)
 Related violations: <none>
 
 
