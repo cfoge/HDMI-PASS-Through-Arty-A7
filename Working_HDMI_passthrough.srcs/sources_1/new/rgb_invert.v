@@ -7,8 +7,8 @@
 // Design Name: 
 // Module Name: rgb_invert
 // Project Name: 
-// Target Devices: 
-// Tool Versions: 
+//Target Devices: Arty Z7
+// Tool Versions: Vivado 2020.2
 // Description: 
 // 
 // Dependencies: 

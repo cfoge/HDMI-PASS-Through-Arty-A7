@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.runs/synth_1/dvi_pass_top.tcl"
+  variable script "C:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.runs/synth_1/posterise.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,18 +70,14 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 2
-set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir C:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.cache/wt [current_project]
 set_property parent.project_path C:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.xpr [current_project]
-set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part_repo_paths {C:/Users/robdj/AppData/Roaming/Xilinx/Vivado/2020.2/xhub/board_store/xilinx_board_store} [current_project]
@@ -92,31 +88,7 @@ set_property ip_output_repo c:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PAS
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib {
-  C:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.srcs/sources_1/new/bus_delay_shiftreg.v
-  C:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.srcs/sources_1/new/nbit_shiftreg.v
-  C:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.srcs/sources_1/new/rgb_invert.v
-  C:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.srcs/sources_1/new/dvi_pass_top.v
-}
-read_ip -quiet C:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0.xci
-set_property used_in_implementation false [get_files -all c:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.gen/sources_1/ip/rgb2dvi_0/src/rgb2dvi.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.gen/sources_1/ip/rgb2dvi_0/src/rgb2dvi_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.gen/sources_1/ip/rgb2dvi_0/src/rgb2dvi_clocks.xdc]
-
-read_ip -quiet C:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.srcs/sources_1/ip/clk_wiz_125M_200M/clk_wiz_125M_200M.xci
-set_property used_in_implementation false [get_files -all c:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.gen/sources_1/ip/clk_wiz_125M_200M/clk_wiz_125M_200M_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.gen/sources_1/ip/clk_wiz_125M_200M/clk_wiz_125M_200M.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.gen/sources_1/ip/clk_wiz_125M_200M/clk_wiz_125M_200M_ooc.xdc]
-
-read_ip -quiet C:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.srcs/sources_1/ip/dvi2rgb_1/dvi2rgb_1.xci
-set_property used_in_implementation false [get_files -all c:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.gen/sources_1/ip/dvi2rgb_1/src/ila_refclk/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.gen/sources_1/ip/dvi2rgb_1/src/ila_refclk/ila_refclk_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.gen/sources_1/ip/dvi2rgb_1/src/ila_pixclk/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.gen/sources_1/ip/dvi2rgb_1/src/ila_pixclk/ila_pixclk_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.gen/sources_1/ip/dvi2rgb_1/src/ila_timing_workaround.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.gen/sources_1/ip/dvi2rgb_1/src/dvi2rgb.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.gen/sources_1/ip/dvi2rgb_1/src/dvi2rgb_ooc.xdc]
-
+read_verilog -library xil_defaultlib C:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.srcs/sources_1/new/posterise.v
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -133,7 +105,7 @@ set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top dvi_pass_top -part xc7z020clg400-1
+synth_design -top posterise -part xc7z020clg400-1
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
@@ -143,10 +115,10 @@ if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
 OPTRACE "write_checkpoint" START { CHECKPOINT }
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef dvi_pass_top.dcp
+write_checkpoint -force -noxdef posterise.dcp
 OPTRACE "write_checkpoint" END { }
 OPTRACE "synth reports" START { REPORT }
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file dvi_pass_top_utilization_synth.rpt -pb dvi_pass_top_utilization_synth.pb"
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file posterise_utilization_synth.rpt -pb posterise_utilization_synth.pb"
 OPTRACE "synth reports" END { }
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]
