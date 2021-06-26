@@ -2,11 +2,11 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Thu Jun 24 17:53:38 2021
-# Process ID: 6748
+# Start of session at: Sat Jun 26 17:58:26 2021
+# Process ID: 12896
 # Current directory: C:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.runs/synth_1
-# Command line: vivado.exe -log posterise.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source posterise.tcl
-# Log file: C:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.runs/synth_1/posterise.vds
+# Command line: vivado.exe -log colourise.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source colourise.tcl
+# Log file: C:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.runs/synth_1/colourise.vds
 # Journal file: C:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source posterise.tcl -notrace
+source colourise.tcl -notrace
