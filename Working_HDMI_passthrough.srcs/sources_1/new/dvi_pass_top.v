@@ -46,7 +46,8 @@ module dvi_pass_top(
 
 ///// Registers and wires
 wire [23:0] vid_pData       ; //vid data from DVI2RGB
-wire [23:0] vid_pData_fx       ; //Post fx vid data
+wire [23:0] vid_pData_fx    ; //Post fx vid data
+wire [7:0] luma         ; 
 wire vid_pVDE           ;
 wire vid_pHSync        ;
 wire vid_pVSync         ;
@@ -142,11 +143,23 @@ assign hdmi_rx_hpd_o = 1'b1 ;
   );
   
   //fx module
-  rgb_invert rgb_invert_inist(
+//  rgb_invert rgb_invert_inist(
+//        .vid_pData_in(vid_pData),
+//        .mode({btn3,btn2,btn1,btn0}),
+//        .vid_pData_out(vid_pData_fx),
+//        .pxclk(pixelclk)
+//    );
+    
+    rgb_2_luma rgb_2_luma_inist(
         .vid_pData_in(vid_pData),
+       
+        .vid_pData_out(luma)
+    );
+    
+    colourise colourise_inst(
+        .vid_pData_in(luma),
         .mode({btn3,btn2,btn1,btn0}),
-        .vid_pData_out(vid_pData_fx),
-        .pxclk(pixelclk)
+        .vid_pData_out(vid_pData_fx)
     );
   
   //

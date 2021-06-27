@@ -67,7 +67,7 @@ module colourise(
             vid = {red, green, blue};
             end
             
-        if ((vid_pData_in >=201) && (vid_pData_in<=256))
+        if ((vid_pData_in >=201) && (vid_pData_in<=255))
             begin
             red = 219; //colour purple
             green = 3;
@@ -76,7 +76,7 @@ module colourise(
             end
         end
           
-        3'b011 : //false colour 2
+        3'b010 : //false colour 2
         begin 
          if ((vid_pData_in >=0) && (vid_pData_in<=50))
             begin
@@ -110,7 +110,7 @@ module colourise(
             vid = {red, green, blue};
             end
             
-        if ((vid_pData_in >=201) && (vid_pData_in<=256))
+        if ((vid_pData_in >=201) && (vid_pData_in<=255))
             begin
             red = 56; //colour blue
             green = 10;
@@ -119,7 +119,10 @@ module colourise(
             end
         end
           
-        
+        default :
+            begin
+                vid = {vid_pData_in, vid_pData_in, vid_pData_in};
+            end
                   
       endcase
             
