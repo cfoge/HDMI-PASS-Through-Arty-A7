@@ -32,7 +32,10 @@ module colourise(
     reg [7:0] blue;
 
     always @ (vid_pData_in, mode) begin
-        if ((vid_pData_in >=0) && (vid_pData_in<=50))
+      case (mode)
+        3'b001 : //false colour 1
+        begin 
+         if ((vid_pData_in >=0) && (vid_pData_in<=50))
             begin
             red = 252; //colour red
             green = 3;
@@ -71,7 +74,54 @@ module colourise(
             blue = 252;
             vid = {red, green, blue};
             end
-                     
+        end
+          
+        3'b011 : //false colour 2
+        begin 
+         if ((vid_pData_in >=0) && (vid_pData_in<=50))
+            begin
+            red = 252; //colour light pink
+            green = 226;
+            blue = 251;
+            vid = {red, green, blue};
+            end
+            
+        if ((vid_pData_in >=51) && (vid_pData_in<=100))
+            begin
+            red = 254; //colour off white
+            green = 245;
+            blue = 238;
+            vid = {red, green, blue};
+            end
+            
+        if ((vid_pData_in >=101) && (vid_pData_in<=150))
+            begin
+            red = 147; //colour purple
+            green = 37;
+            blue = 152;
+            vid = {red, green, blue};
+            end
+            
+        if ((vid_pData_in >=151) && (vid_pData_in<=200))
+            begin
+            red = 301; //colour red
+            green = 19;
+            blue = 103;
+            vid = {red, green, blue};
+            end
+            
+        if ((vid_pData_in >=201) && (vid_pData_in<=256))
+            begin
+            red = 56; //colour blue
+            green = 10;
+            blue = 138;
+            vid = {red, green, blue};
+            end
+        end
+          
+        
+                  
+      endcase
             
     end
     
