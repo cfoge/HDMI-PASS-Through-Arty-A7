@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Sun Jun 27 13:36:21 2021
+| Date         : Thu Jul  1 10:51:41 2021
 | Host         : LAPTOP-2OPCD7I5 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file dvi_pass_top_utilization_synth.rpt -pb dvi_pass_top_utilization_synth.pb
 | Design       : dvi_pass_top
@@ -30,8 +30,8 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |   61 |     0 |     53200 |  0.11 |
-|   LUT as Logic          |   61 |     0 |     53200 |  0.11 |
+| Slice LUTs*             |   67 |     0 |     53200 |  0.13 |
+|   LUT as Logic          |   67 |     0 |     53200 |  0.13 |
 |   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
 | Slice Registers         |    0 |     0 |    106400 |  0.00 |
 |   Register as Flip Flop |    0 |     0 |    106400 |  0.00 |
@@ -146,12 +146,12 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     |   40 |                 LUT |
-| LUT4     |   14 |                 LUT |
-| LUT3     |   10 |                 LUT |
-| LUT5     |    6 |                 LUT |
+| LUT6     |   41 |                 LUT |
+| LUT5     |   14 |                 LUT |
+| LUT3     |   14 |                 LUT |
+| LUT4     |   12 |                 LUT |
 | IBUF     |    6 |                  IO |
-| LUT2     |    4 |                 LUT |
+| LUT2     |    3 |                 LUT |
 | CARRY4   |    3 |          CarryLogic |
 | OBUFT    |    2 |                  IO |
 | OBUF     |    1 |                  IO |

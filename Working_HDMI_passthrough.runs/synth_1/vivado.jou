@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Sun Jun 27 13:35:35 2021
-# Process ID: 15184
+# Start of session at: Thu Jul  1 10:50:45 2021
+# Process ID: 26468
 # Current directory: C:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.runs/synth_1
 # Command line: vivado.exe -log dvi_pass_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source dvi_pass_top.tcl
 # Log file: C:/Users/robdj/Documents/RMIT_2021/CAP_STONE/DVI_PASSTHROUGH_CAPS/Working_HDMI_passthrough/Working_HDMI_passthrough.runs/synth_1/dvi_pass_top.vds
